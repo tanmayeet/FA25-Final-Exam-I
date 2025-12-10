@@ -28,7 +28,7 @@ int main() {
     }
   }
 
-  cout << "Busiest airport(s)\n" << endl;
+  cout << "\nBusiest airport(s): " << endl;
 
   for (const auto& entry : traffic) {
     if (entry.second == highestTrafficCount) {
