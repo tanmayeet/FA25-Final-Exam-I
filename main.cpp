@@ -19,5 +19,22 @@ int main() {
     cout << entry.first << " " << entry.second << endl;
   }
 
+  // Milestone 2
+  int highestTrafficCount = 0;
+
+  for (const auto& entry : traffic) {
+    if (entry.second > highestTrafficCount) {
+      highestTrafficCount = entry.second;
+    }
+  }
+
+  cout << "Busiest airport(s)\n" << endl;
+
+  for (const auto& entry : traffic) {
+    if (entry.second == highestTrafficCount) {
+      cout << entry.first << " " << entry.second << endl;
+    }
+  }
+
   return 0;
 }
