@@ -13,5 +13,13 @@ int main() {
   ifstream file("210-final-1-FA25-1.txt");
   string origin, dest;
 
+  while (file >> origin >> dest) {
+    traffic[origin]++;
+    traffic[dest]++;
+  }
+
+  for (const auto& entry : traffic) {
+    }
+
   return 0;
 }
