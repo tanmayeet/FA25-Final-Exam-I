@@ -5,8 +5,10 @@
 #include <string>
 using namespace std;
 
+void printInRange(const map<string, int>& traffic, int low, int high);
+
 // Milestone 3
-void printInRange(const map<string, int> traffic, int low, int high) {
+void printInRange(const map<string, int>& traffic, int low, int high) {
   cout << "Airports with traffic in range [" << low << ", " << high << "]: \n";
 
   for (const auto& entry : traffic) {
@@ -16,6 +18,7 @@ void printInRange(const map<string, int> traffic, int low, int high) {
   }
 }
 
+// Milestone 4: Made changes so output matched sample output
 int main() {
   map<string, int> traffic;
   ifstream file("210-final-1-FA25-1.txt");
@@ -25,8 +28,7 @@ int main() {
     traffic[origin]++;
     traffic[dest]++;
   }
-  cout << endl;
-
+  cout << "All airport traffic counts:\n";
   for (const auto& entry : traffic) {
     cout << entry.first << " " << entry.second << endl;
   }
@@ -40,7 +42,7 @@ int main() {
     }
   }
 
-  cout << "\nBusiest airport(s) with count 35:" << endl;
+  cout << "\nBusiest airport(s) with count :" << highestTrafficCount << endl;
 
   for (const auto& entry : traffic) {
     if (entry.second == highestTrafficCount) {
