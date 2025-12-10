@@ -1,6 +1,3 @@
-// COMSC210 | Final 1 | Tanmayee Chalamalasetti
-// IDE Used: VS Code
-
 // Milestone 1
 #include <fstream>
 #include <iostream>
