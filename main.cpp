@@ -18,7 +18,6 @@ void printInRange(const map<string, int>& traffic, int low, int high) {
   }
 }
 
-// Milestone 4
 int main() {
   map<string, int> traffic;
   ifstream file("210-final-1-FA25-1.txt");
