@@ -7,10 +7,10 @@ using namespace std;
 
 // Milestone 3
 void printInRange(const map<string, int> traffic, int low, int high) {
-  cout << "Airports within range [" << low << ", " << high << "]: \n";
+  cout << "Airports with traffic in range [" << low << ", " << high << "]: \n";
 
   for (const auto& entry : traffic) {
-    if (entry.second > low && entry.second < high) {
+    if (entry.second >= low && entry.second <= high) {
       cout << entry.first << " " << entry.second << endl;
     }
   }
@@ -25,6 +25,7 @@ int main() {
     traffic[origin]++;
     traffic[dest]++;
   }
+  cout << endl;
 
   for (const auto& entry : traffic) {
     cout << entry.first << " " << entry.second << endl;
@@ -39,13 +40,19 @@ int main() {
     }
   }
 
-  cout << "\nBusiest airport(s): " << endl;
+  cout << "\nBusiest airport(s) with count 35:" << endl;
 
   for (const auto& entry : traffic) {
     if (entry.second == highestTrafficCount) {
       cout << entry.first << " " << entry.second << endl;
     }
   }
+  cout << endl;
+
+  // Testing for Milestone 3
+  printInRange(traffic, 5, 8);
+  cout << endl;
+  printInRange(traffic, 9, 12);
 
   return 0;
 }
